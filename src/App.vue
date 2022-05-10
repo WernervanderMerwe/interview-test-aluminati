@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <input type="number" v-model="limit" />
-    <Numbers/>
+    <Numbers />
   </div>
 </template>
 
 <script>
-import Numbers from '@/components/Numbers';
+import Numbers from "@/components/Numbers";
 
 export default {
-  name: 'App',
-  components: {Numbers},
-  data()
-  {
+  name: "App",
+  components: {
+    Numbers
+  },
+  data() {
     return {
       limit: 100
-    }
+    };
   }
-}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
