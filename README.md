@@ -44,4 +44,4 @@ If you have been invited to perform this test your submission should be through 
 
 6. I left some code behind commented out to highlight thought processes and comments on it.
 
-7. I tested the limit number till 100 000 in multiples of 10, 100 000 took about 10 seconds to render, but I have a particularly powerful PC. I'm thinking of doing some unit testing to test my theories of saving computational cost, especially between using `queryselectorAll()` and `array.forEach({...getElementbyId()})`.
+7. I tested the limit number till 100 000 in powers of 10, 100 000 took about 10 seconds to render, but I have a particularly powerful PC. I'm thinking of doing some unit testing to test my theories of saving computational cost, especially between using `queryselectorAll()` and `array.forEach({...getElementbyId()})`.
