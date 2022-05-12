@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <input type="number" v-model="limit" />
-    <Numbers />
+    <!-- added prop to avoid using $parent to make the component more reusable -->
+    <Numbers :limit="limit" />
   </div>
 </template>
 

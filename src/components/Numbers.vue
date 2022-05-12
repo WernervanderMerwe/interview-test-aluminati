@@ -17,9 +17,14 @@
 
 <script>
 export default {
+  props: {
+    limit: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
-      limit: this.$parent.limit,
       // numbers never got populated, I populated this.numbers in getRandomNumbers() and moved the method to the computed property to get called only on limit change
       numbers: []
       ///// My first approach ended up being too computationally expensive and overcomplicating destructuring but I left it here for interest sake: /////
@@ -28,6 +33,8 @@ export default {
   },
   computed: {
     getRandomNumbers() {
+      // on each call this.numbers need to be emptied out
+      this.numbers = [];
       // unneccessary to declare another variable here
       // let numbers = [];
       // included the last integer by changing < to <=
@@ -40,13 +47,6 @@ export default {
       this.numbers.sort(() => Math.random() - 0.5);
 
       return this.numbers;
-    }
-  },
-  watch: {
-    ["$parent.limit"](newLimit) {
-      this.limit = newLimit;
-      // I directly populated the numbers state with the getRandomNumbers() function, thus on limit change I need to reset the numbers state.
-      this.numbers = [];
     }
   },
   methods: {
